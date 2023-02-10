@@ -160,16 +160,48 @@ li>a:hover::after {
     text-transform: uppercase;
 }
 
+/* to adjust cards we can use width or flex grow 1 */
+
+/* when using width instead of flex-grow : 1 we need to change gap between cards 
+for responsivenes */
+
+/* there will be issue with flexgrow-1 that if at last row , we have 2 cards only then 
+it will expand and try to grow  */
+
 .creation-cards {
     display: flex;
-    justify-content: center;
     gap: 48px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   
     row-gap: 3rem;
 }
 
 .card {
     position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+/* .creation-cards {
+    display: flex;
+    gap: 68px;
+    flex-wrap: wrap;   
+    row-gap: 3rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: 20%;
+} */
+
+.card > figure {
+    display: flex;
+    width: 100%;
+}
+
+.card figure img {
+    max-width: 100%;
+    width: 100%;
 }
 
 .card-text {
@@ -230,6 +262,10 @@ li>a:hover::after {
     display: flex;
     justify-content: end;
     gap: 1rem;
+}
+
+.mbl-see-all-btn {
+    display: none;
 }
 
 #mobile-menu-checkbox {
@@ -363,6 +399,17 @@ li>a:hover::after {
 
     .footer-txt {
         margin: 0;
+    }
+
+    .mbl-see-all-btn {
+        display: block;
+        background-color: var(--White);
+        padding: 8px 35px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
 
 }
