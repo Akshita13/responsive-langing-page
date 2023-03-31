@@ -413,3 +413,28 @@ it will expand and try to grow  */
     }
 
 }
+
+/* CSS combinators examples */
+
+/* selects children of ul */
+ul > li {
+    border-top: 5px solid red;
+} 
+
+/* selects all h1(on any level) inside leader section class  */
+.leader-section h1{
+    border: 5px solid black;
+}
+
+/* selects first h1 element placed immediately after .leader-section class (As a sibling) */
+img + ul{
+    background-color: brown;
+    border: 5px solid yellowgreen;
+}
+
+/* selects all .card-text class which are siblings of figure element */
+figure ~ .card-text{
+    border: 5px solid blueviolet;
+}
+
+
